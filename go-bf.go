@@ -1,8 +1,7 @@
 package gobf
 
-import "fmt"
-
-func BrainFuck(code string) {
+func BrainFuck(code string) string {
+	output := ""
 	cnt := 0
 	ptr := 0
 	var ascii [30000]int
@@ -47,8 +46,9 @@ func BrainFuck(code string) {
 				}
 			}
 		} else if string(code[cnt]) == "." {
-			fmt.Printf("%c", ascii[ptr])
+			output += string(ascii[ptr])
 		}
 		cnt++
 	}
+	return output
 }
