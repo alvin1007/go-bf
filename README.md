@@ -11,7 +11,11 @@ gobf.BrainFuck("{your bf code}")
 ```
 package main
 
-import gobf "github.com/alvin1007/go-bf"
+import (
+	"fmt"
+	
+	gobf "github.com/alvin1007/go-bf"
+)
 
 func main() {
 	fmt.Print(gobf.BrainFuck("+[>[<-[]>+[>+++>[+++++++++++>][>]-[<]>-]]++++++++++<]>>>>>>----.<<+++.<-..+++.<-.>>>.<<.+++.------.>-.<<+.<."))
